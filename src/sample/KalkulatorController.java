@@ -39,22 +39,23 @@ public class KalkulatorController {
     @FXML
     public void calculateButton() {
             if (valueTextField.getText().isEmpty() || valueTextField.getText().equals("")) {
-                valueTextField.setText("Error for lite tall. Trykk på C og prøv igjen :)");
-            }
-            if (operator.equals("+")) {
-                Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
-                valueTextField.setText(Double.toString(calculate));
-            } else if (operator.equals("-")) {
-                Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
-                valueTextField.setText(Double.toString(calculate));
-            } else if (operator.equals("x")) {
-                Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
-                valueTextField.setText(Double.toString(calculate));
-            } else if (operator.equals("/")) {
-                Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
-                valueTextField.setText(Double.toString(calculate));
+
             } else {
-                valueTextField.setText("");
+                if (operator.equals("+")) {
+                    Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
+                    valueTextField.setText(Double.toString(calculate));
+                } else if (operator.equals("-")) {
+                    Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
+                    valueTextField.setText(Double.toString(calculate));
+                } else if (operator.equals("x")) {
+                    Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
+                    valueTextField.setText(Double.toString(calculate));
+                } else if (operator.equals("/")) {
+                    Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
+                    valueTextField.setText(Double.toString(calculate));
+                } else {
+                    valueTextField.setText("");
+                }
             }
         }
 

@@ -23,6 +23,10 @@ public class KalkulatorController {
 
     @FXML
     public void handleDigitOperator(ActionEvent event) {
+        if (!memory.equals("") && !valueTextField.equals("")) {
+            this.calculateButton();
+        }
+
         Button button = (Button) event.getSource();
         buttonText = button.getText();
         this.setOperator(buttonText);
@@ -31,7 +35,7 @@ public class KalkulatorController {
     }
 
     @FXML
-    public void calculateButton(ActionEvent event) {
+    public void calculateButton() {
         if (operator.equals("+")) {
             int calculate = Integer.parseInt(this.memory) + Integer.parseInt(valueTextField.getText());
             valueTextField.setText(Integer.toString(calculate));

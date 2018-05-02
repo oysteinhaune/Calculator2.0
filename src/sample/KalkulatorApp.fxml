@@ -5,85 +5,90 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KalkulatorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.KalkulatorController">
    <children>
       <TextField fx:id="valueTextField" layoutX="19.0" layoutY="25.0" prefHeight="63.0" prefWidth="332.0" />
-      <Button layoutX="19.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="7">
+      <Button layoutX="19.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="7">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="19.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="4">
+      <Button layoutX="19.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="4">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="19.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="1">
+      <Button layoutX="19.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="1">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="19.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="0">
+      <Button layoutX="19.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="102.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="8">
+      <Button layoutX="102.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="8">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="102.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="5">
+      <Button layoutX="102.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="5">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="102.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="2">
+      <Button layoutX="102.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="2">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="102.0" layoutY="229.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="83.0" text="C">
+      <Button layoutX="268.0" layoutY="88.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="83.0" text="C">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="9">
+      <Button layoutX="185.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="9">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="6">
+      <Button layoutX="185.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="6">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="3">
+      <Button layoutX="185.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitButton" prefHeight="47.0" prefWidth="83.0" text="3">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="229.0" mnemonicParsing="false" onAction="#calculateButton" prefHeight="47.0" prefWidth="83.0" text="=">
+      <Button layoutX="185.0" layoutY="276.0" mnemonicParsing="false" onAction="#calculateButton" prefHeight="47.0" prefWidth="83.0" text="=">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="268.0" layoutY="88.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="/">
+      <Button layoutX="268.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="/">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="268.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="x">
+      <Button layoutX="268.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="x">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="268.0" layoutY="182.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="-">
+      <Button layoutX="268.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="-">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="268.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="+">
+      <Button layoutX="268.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleDigitOperator" prefHeight="47.0" prefWidth="83.0" text="+">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="102.0" layoutY="276.0" mnemonicParsing="false" onAction="#commaButton" prefHeight="47.0" prefWidth="83.0" text=".">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>

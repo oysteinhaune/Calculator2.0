@@ -37,17 +37,25 @@ public class KalkulatorController {
     @FXML
     public void calculateButton() {
         if (operator.equals("+")) {
-            int calculate = Integer.parseInt(this.memory) + Integer.parseInt(valueTextField.getText());
-            valueTextField.setText(Integer.toString(calculate));
+            Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
+            valueTextField.setText(Double.toString(calculate));
         } else if (operator.equals("-")) {
-            int calculate = Integer.parseInt(this.memory) - Integer.parseInt(valueTextField.getText());
-            valueTextField.setText(Integer.toString(calculate));
+            Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
+            valueTextField.setText(Double.toString(calculate));
         } else if (operator.equals("x")) {
-            int calculate = Integer.parseInt(this.memory) * Integer.parseInt(valueTextField.getText());
-            valueTextField.setText(Integer.toString(calculate));
+            Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
+            valueTextField.setText(Double.toString(calculate));
         } else if (operator.equals("/")) {
-            int calculate = Integer.parseInt(this.memory) / Integer.parseInt(valueTextField.getText());
-            valueTextField.setText(Integer.toString(calculate));
+            Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
+            valueTextField.setText(Double.toString(calculate));
+        }
+    }
+
+    @FXML
+    public void commaButton(ActionEvent event) {
+        if (!valueTextField.getText().contains(".")) {
+            Button button = (Button) event.getSource();
+            valueTextField.setText(valueTextField.getText() + button.getText());
         }
     }
 

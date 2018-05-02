@@ -3,10 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
-
-import java.util.regex.Pattern;
 
 public class KalkulatorController {
     @FXML
@@ -61,7 +58,7 @@ public class KalkulatorController {
 
     @FXML
     public void commaButton(ActionEvent event) {
-        if (!valueTextField.getText().contains(".")) {
+        if (!valueTextField.getText().contains(".") && valueTextField.getText().length() > 2) {
             Button button = (Button) event.getSource();
             valueTextField.setText(valueTextField.getText() + button.getText());
         }

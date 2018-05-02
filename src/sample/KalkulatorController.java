@@ -6,14 +6,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
 
+import java.util.regex.Pattern;
+
 public class KalkulatorController {
     @FXML
     TextField valueTextField;
-    String valueText;
-    String buttonText;
+    String buttonText = "";
     String memory = "";
-    String operator;
-    Boolean firstTime = true;
+    String operator = "";
+
 
     @FXML
     public void handleDigitButton(ActionEvent event) {
@@ -23,33 +24,39 @@ public class KalkulatorController {
 
     @FXML
     public void handleDigitOperator(ActionEvent event) {
-        if (!memory.equals("") && !valueTextField.equals("")) {
-            this.calculateButton();
-        }
+        String text = valueTextField.getText();
+            if (!memory.equals("") && !valueTextField.equals("")) {
+                this.calculateButton();
+            }
 
-        Button button = (Button) event.getSource();
-        buttonText = button.getText();
-        this.setOperator(buttonText);
-        this.setMemory(valueTextField.getText());
-        valueTextField.setText("");
+            Button button = (Button) event.getSource();
+            buttonText = button.getText();
+            this.setOperator(buttonText);
+            this.setMemory(valueTextField.getText());
+            valueTextField.setText("");
     }
 
     @FXML
     public void calculateButton() {
-        if (operator.equals("+")) {
-            Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
-            valueTextField.setText(Double.toString(calculate));
-        } else if (operator.equals("-")) {
-            Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
-            valueTextField.setText(Double.toString(calculate));
-        } else if (operator.equals("x")) {
-            Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
-            valueTextField.setText(Double.toString(calculate));
-        } else if (operator.equals("/")) {
-            Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
-            valueTextField.setText(Double.toString(calculate));
+            if (valueTextField.getText().isEmpty() || valueTextField.getText().equals("")) {
+                valueTextField.setText("Error for lite tall. Trykk på C og prøv igjen :)");
+            }
+            if (operator.equals("+")) {
+                Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("-")) {
+                Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("x")) {
+                Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("/")) {
+                Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else {
+                valueTextField.setText("");
+            }
         }
-    }
 
     @FXML
     public void commaButton(ActionEvent event) {

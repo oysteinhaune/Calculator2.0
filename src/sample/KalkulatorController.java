@@ -58,7 +58,7 @@ public class KalkulatorController {
 
     @FXML
     public void commaButton(ActionEvent event) {
-        if (!valueTextField.getText().contains(".") && valueTextField.getText().length() > 2) {
+        if (!valueTextField.getText().contains(".") && valueTextField.getText().length() != 0) {
             Button button = (Button) event.getSource();
             valueTextField.setText(valueTextField.getText() + button.getText());
         }

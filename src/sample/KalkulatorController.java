@@ -35,26 +35,26 @@ public class KalkulatorController {
 
     @FXML
     public void calculateButton() {
-            if (valueTextField.getText().isEmpty() || valueTextField.getText().equals("")) {
+        if (valueTextField.getText().isEmpty() || valueTextField.getText().equals("")) {
 
+        } else {
+            if (operator.equals("+")) {
+                Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("-")) {
+                Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("x")) {
+                Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
+            } else if (operator.equals("/")) {
+                Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
+                valueTextField.setText(Double.toString(calculate));
             } else {
-                if (operator.equals("+")) {
-                    Double calculate = Double.parseDouble(this.memory) + Double.parseDouble(valueTextField.getText());
-                    valueTextField.setText(Double.toString(calculate));
-                } else if (operator.equals("-")) {
-                    Double calculate = Double.parseDouble(this.memory) - Double.parseDouble(valueTextField.getText());
-                    valueTextField.setText(Double.toString(calculate));
-                } else if (operator.equals("x")) {
-                    Double calculate = Double.parseDouble(this.memory) * Double.parseDouble(valueTextField.getText());
-                    valueTextField.setText(Double.toString(calculate));
-                } else if (operator.equals("/")) {
-                    Double calculate = Double.parseDouble(this.memory) / Double.parseDouble(valueTextField.getText());
-                    valueTextField.setText(Double.toString(calculate));
-                } else {
-                    valueTextField.setText("");
-                }
+                valueTextField.setText("");
             }
         }
+    }
 
     @FXML
     public void commaButton(ActionEvent event) {
